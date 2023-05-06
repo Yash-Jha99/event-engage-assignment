@@ -1,0 +1,67 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  width: 100%;
+  border-bottom: 1px solid #e9ebeb;
+}
+
+.navItems {
+  display: none;
+}
+
+.sidepanel {
+  width: 100vw;
+  padding: 6px 6px 30px 30px;
+  font-size: 16px;
+}
+
+.showbtn {
+  display: initial;
+}
+
+.sidePanelBody {
+  width: 100%;
+}
+
+.closebtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.badge {
+  width: 17 !important;
+  height: 17 !important;
+  font-size: 9 !important;
+}
+
+.divider {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.role {
+  font-size: 12px !important;
+  line-height: 16px;
+}
+
+.name {
+  font-size: 16px !important;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.links {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 576px) {
+  .showbtn {
+    display: none;
+  }
+
+  .navItems {
+    display: flex;
+  }
+}
