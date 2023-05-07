@@ -105,7 +105,11 @@ const Navbar = ({ name, image, role }: Props) => {
           </div>
           <div>
             <Space>
-              <Avatar size={44} src={image} />
+              {image ? (
+                <Avatar size={44} src={image} />
+              ) : (
+                <Avatar size={44} icon={<UserOutlined />} />
+              )}
               <Space size={2} direction="vertical">
                 <span className={styles.name}>{name}</span>
                 <span className={styles.role}>{role}</span>
