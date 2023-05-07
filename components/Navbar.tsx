@@ -17,6 +17,7 @@ import List from "antd/es/list";
 import MailIcon from "@/assets/MailIcon";
 import CloseOutlined from "@ant-design/icons/lib/icons/CloseOutlined";
 import theme from "antd/es/theme";
+import UserOutlined from "@ant-design/icons/lib/icons/UserOutlined";
 
 const data = [
   {
@@ -73,7 +74,11 @@ const Navbar = ({ name, image, role }: Props) => {
               )}
             </a>
           ))}
-          <Avatar size={44} src={image} />
+          {image ? (
+            <Avatar size={44} src={image} />
+          ) : (
+            <Avatar size={44} icon={<UserOutlined />} />
+          )}
         </Space>
         <Button
           className={styles.showbtn}

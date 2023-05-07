@@ -35,11 +35,7 @@ export default function Home() {
       </Head>
       <ConfigProvider theme={theme}>
         <main className={styles.main}>
-          <Navbar
-            name="Jane Smith"
-            role="Sales Executive"
-            image="https://xsgames.co/randomusers/avatar.php?g=male"
-          />
+          <Navbar name="Jane Smith" role="Sales Executive" image="" />
           <Banner
             title="WeWork + Salesforce"
             onPublish={() => console.log("Publish Button Clicked")}
