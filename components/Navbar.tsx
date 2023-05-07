@@ -13,13 +13,10 @@ import Drawer from "antd/es/drawer";
 import Button from "antd/es/button";
 import Divider from "antd/es/divider";
 import Badge from "antd/es/badge";
-import Typography from "antd/es/typography";
 import List from "antd/es/list";
 import MailIcon from "@/assets/MailIcon";
 import CloseOutlined from "@ant-design/icons/lib/icons/CloseOutlined";
 import theme from "antd/es/theme";
-
-const { Text } = Typography;
 
 const data = [
   {
@@ -32,7 +29,7 @@ const data = [
   },
   {
     Icon: BellOutlined,
-    title: "Notifiactions",
+    title: "Notifications",
   },
   {
     Icon: QuestionCircleOutlined,
@@ -57,16 +54,24 @@ const Navbar = ({ name, image, role }: Props) => {
   return (
     <>
       <div className={styles.navbar}>
+        {/* Logo */}
         <Space size={8}>
           <Image src={Logo} alt="logo" width={38} height={38} />
           <RightOutlined style={{ fontSize: 12, color: "black" }} />
         </Space>
+
+        {/* Nav Right Items */}
         <Space className={styles.navItems} size={36} align="center">
           {data.map((item) => (
-            <item.Icon
-              key={item.title}
-              style={{ fontSize: 24, color: token.colorText }}
-            />
+            <a key={item.title} href={`/${item.title}`}>
+              {item.title === "Notifications" ? (
+                <Badge count={5}>
+                  <item.Icon style={{ fontSize: 24, color: token.colorText }} />
+                </Badge>
+              ) : (
+                <item.Icon style={{ fontSize: 24, color: token.colorText }} />
+              )}
+            </a>
           ))}
           <Avatar size={44} src={image} />
         </Space>
@@ -79,6 +84,7 @@ const Navbar = ({ name, image, role }: Props) => {
         </Button>
       </div>
 
+      {/* Nav Drawer panel for  mobile devices */}
       <Drawer
         className={styles.sidepanel}
         placement="right"
@@ -96,10 +102,8 @@ const Navbar = ({ name, image, role }: Props) => {
             <Space>
               <Avatar size={44} src={image} />
               <Space size={2} direction="vertical">
-                <Text strong className={styles.name}>
-                  {name}
-                </Text>
-                <Text className={styles.role}>{role}</Text>
+                <span className={styles.name}>{name}</span>
+                <span className={styles.role}>{role}</span>
               </Space>
             </Space>
             <Divider className={styles.divider} />
@@ -111,7 +115,7 @@ const Navbar = ({ name, image, role }: Props) => {
                   <List.Item.Meta
                     avatar={
                       item.title === "Notifications" ? (
-                        <Badge count={25}>
+                        <Badge count={5}>
                           <item.Icon style={{ fontSize: 24 }} />
                         </Badge>
                       ) : (

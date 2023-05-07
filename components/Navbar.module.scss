@@ -30,12 +30,6 @@
   justify-content: flex-end;
 }
 
-.badge {
-  width: 17 !important;
-  height: 17 !important;
-  font-size: 9 !important;
-}
-
 .divider {
   margin-top: 12px;
   margin-bottom: 0;
@@ -44,12 +38,14 @@
 .role {
   font-size: 12px !important;
   line-height: 16px;
+  color: #7b8786;
 }
 
 .name {
   font-size: 16px !important;
   font-weight: 700;
   line-height: 16px;
+  color: #233735;
 }
 
 .links {

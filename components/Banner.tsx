@@ -17,6 +17,7 @@ type Props = {
 const Banner = ({ title, onPublish }: Props) => {
   return (
     <div>
+      {/* Banner Title */}
       <div className={styles.top}>
         <Title className={styles.title} level={2}>
           {title}
@@ -25,21 +26,22 @@ const Banner = ({ title, onPublish }: Props) => {
           Publish/Share
         </Button>
       </div>
+
+      {/* Banner Image */}
       <div className={styles.banner}>
         <Image src={BannerImage} fill alt="banner" />
         <div className={styles.imageText}>
           <p>Workspace Proposal</p>
         </div>
         <div className={styles.logos}>
-          <Space size={14}>
-            <Image src={WeworkLogo} width={77} height={77} alt="wework" />
-            <PlusOutlined />
-            <Image
-              src={SalesforceLogo}
-              width={98}
-              height={88}
-              alt="salesforce"
-            />
+          <Space size="small">
+            <div className={styles.image}>
+              <Image src={WeworkLogo} fill alt="wework" />
+            </div>
+            <PlusOutlined style={{ color: "#8C8C8C" }} />
+            <div className={styles.image}>
+              <Image src={SalesforceLogo} fill alt="salesforce" />
+            </div>
           </Space>
         </div>
       </div>
