@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Live App
 
-## Getting Started
+### _[Vercel](https://event-engage-assignment.vercel.app/)_
 
-First, run the development server:
+### _[Netlify](https://incredible-melomakarona-c39269.netlify.app/)_
+
+# Running Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  git clone https://github.com/Yash-Jha99/event-engage-assignment.git
+```
+
+Go to the project directory
+
+```bash
+  cd event-engage-assignment
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Build the application
+
+```bash
+  npm run build
+```
+
+Start application
+
+```bash
+  npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
+# Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# Deploy on Netlify
+
+Check out [Netlify Next.js deployment documentation](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/) for deployment details.
